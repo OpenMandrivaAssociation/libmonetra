@@ -1,10 +1,11 @@
 %define	major 5
-%define libname	%mklibname monetra %{major}
+%define libname %mklibname monetra %{major}
+%define develname %mklibname monetra -d
 
 Summary:	Library to allow credit card processing through MCVE
 Name:		libmonetra
 Version:	5.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Libraries
 License:	BSD
 URL:		http://www.mainstreetsoftworks.com/
@@ -27,14 +28,14 @@ Group:          System/Libraries
 library for connecting to a MCVE Credit Card Processing Daemon via
 SSL, TCP/IP, and drop-files.
 
-%package -n	%{libname}-devel
+%package -n	%{develname}
 Summary:	Static library and header files for the %{name} library
 Group:		Development/C
-Provides:	%{name}-devel = %{version}
-Provides:	lib%{name}-devel = %{version}
 Requires:	%{libname} = %{version}
+Provides:	%{name}-devel = %{version}-%{release}
+Obsoletes:	%{mklibname monetra 5 -d}
 
-%description -n	%{libname}-devel
+%description -n	%{develname}
 library for connecting to a MCVE Credit Card Processing Daemon via
 SSL, TCP/IP, and drop-files.
 
@@ -71,12 +72,10 @@ libtoolize --copy --force; aclocal-1.7; autoconf; automake-1.7 --add-missing --c
 %doc AUTHORS ChangeLog LICENSE README
 %{_libdir}/*.so.*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-,root,root)
 %doc LICENSE
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/*.a
 %{_libdir}/*.la
-
-
