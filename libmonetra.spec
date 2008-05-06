@@ -1,20 +1,20 @@
-%define	major 5
+%define	major 7
 %define libname %mklibname monetra %{major}
 %define develname %mklibname monetra -d
 
 Summary:	Library to allow credit card processing through MCVE
 Name:		libmonetra
-Version:	5.2
-Release:	%mkrel 2
+Version:	7.0.0
+Release:	%mkrel 1
 Group:		System/Libraries
 License:	BSD
 URL:		http://www.mainstreetsoftworks.com/
-Source0:	ftp://ftp.mcve.com/pub/libmonetra/%{name}-%{version}.tar.bz2
+Source0:	ftp://ftp.mcve.com/pub/libmonetra/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf2.5
 BuildRequires:	automake1.7
 BuildRequires:	libtool
 BuildRequires:	openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 library for connecting to a MCVE Credit Card Processing Daemon via
@@ -56,7 +56,7 @@ libtoolize --copy --force; aclocal-1.7; autoconf; automake-1.7 --add-missing --c
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %makeinstall_std
 
@@ -65,7 +65,7 @@ libtoolize --copy --force; aclocal-1.7; autoconf; automake-1.7 --add-missing --c
 %postun -n %{libname} -p /sbin/ldconfig
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-,root,root)
