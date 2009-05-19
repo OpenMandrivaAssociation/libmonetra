@@ -4,14 +4,13 @@
 
 Summary:	Library to allow credit card processing through MCVE
 Name:		libmonetra
-Version:	7.0.0
-Release:	%mkrel 3
+Version:	7.0.4
+Release:	%mkrel 1
 Group:		System/Libraries
 License:	BSD
 URL:		http://www.mainstreetsoftworks.com/
 Source0:	ftp://ftp.mcve.com/pub/libmonetra/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf2.5
-BuildRequires:	automake1.7
 BuildRequires:	libtool
 BuildRequires:	openssl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -49,7 +48,7 @@ files.
 %build
 export WANT_AUTOCONF_2_5=1
 rm -f configure
-libtoolize --copy --force; aclocal-1.7; autoconf; automake-1.7 --add-missing --copy
+libtoolize --copy --force; aclocal; autoconf; automake --add-missing --copy
 
 %configure2_5x
 
