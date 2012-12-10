@@ -82,3 +82,56 @@ rm -rf %{buildroot}
 %{_libdir}/*.so
 %{_libdir}/*.a
 %{_libdir}/*.la
+
+
+%changelog
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 7.0.5-3mdv2011.0
++ Revision: 609758
+- rebuild
+
+* Tue Apr 20 2010 Funda Wang <fwang@mandriva.org> 7.0.5-2mdv2010.1
++ Revision: 536955
+- rebuild
+
+* Sun Dec 27 2009 Oden Eriksson <oeriksson@mandriva.com> 7.0.5-1mdv2010.1
++ Revision: 482802
+- 7.0.5
+
+* Tue May 19 2009 Oden Eriksson <oeriksson@mandriva.com> 7.0.4-1mdv2010.0
++ Revision: 377610
+- 7.0.4
+- fix build
+
+* Wed Apr 01 2009 Oden Eriksson <oeriksson@mandriva.com> 7.0.0-3mdv2009.1
++ Revision: 363368
+- rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 7.0.0-2mdv2009.0
++ Revision: 267919
+- rebuild early 2009.0 package (before pixel changes)
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Tue May 06 2008 Oden Eriksson <oeriksson@mandriva.com> 7.0.0-1mdv2009.0
++ Revision: 201821
+- 7.0.0
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sun Sep 09 2007 Oden Eriksson <oeriksson@mandriva.com> 5.2-2mdv2008.0
++ Revision: 83686
+- new devel naming
+
+
+* Fri Dec 08 2006 Oden Eriksson <oeriksson@mandriva.com> 5.2-1mdv2007.0
++ Revision: 93722
+- Import libmonetra
+
+* Sat Feb 04 2006 Oden Eriksson <oeriksson@mandriva.com> 5.2-1mdk
+- initial Mandriva package
+
