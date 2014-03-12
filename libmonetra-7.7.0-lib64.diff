@@ -1,0 +1,13 @@
+--- configure.in	2012-04-16 17:04:23.000000000 +0200
++++ configure.in.oden	2013-08-24 10:15:04.724236042 +0200
+@@ -136,6 +136,10 @@
+ 				ssl_header_dir="$dir/include"
+ 				ssl_lib_dir="$dir/lib"
+ 				break
++			elif test -r "$dir/lib64/libssl.${ext}" ; then
++				ssl_header_dir="$dir/include"
++				ssl_lib_dir="$dir/lib64"
++				break
+ 			elif test -r "$dir/lib/x86_64-linux-gnu/libssl.${ext}" ; then
+ 				ssl_header_dir="$dir/include"
+ 				ssl_lib_dir="$dir/lib/x86_64-linux-gnu"
