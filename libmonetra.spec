@@ -6,7 +6,7 @@
 Summary:	Library to allow credit card processing through MCVE
 Name:		libmonetra
 Version:	7.7.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		System/Libraries
 Url:		http://www.mainstreetsoftworks.com/
@@ -74,6 +74,7 @@ This package contains development library and its header files.
 %patch0 -p0
 
 %build
+autoreconf
 %configure2_5x --disable-static
 %make
 
