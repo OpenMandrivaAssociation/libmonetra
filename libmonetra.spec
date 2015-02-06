@@ -6,7 +6,7 @@
 Summary:	Library to allow credit card processing through MCVE
 Name:		libmonetra
 Version:	7.13.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		System/Libraries
 Url:		http://www.mainstreetsoftworks.com/
