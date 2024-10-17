@@ -9,7 +9,7 @@ Version:	7.13.0
 Release:	2
 License:	BSD
 Group:		System/Libraries
-Url:		http://www.mainstreetsoftworks.com/
+Url:		https://www.mainstreetsoftworks.com/
 Source0:	ftp://ftp.mcve.com/pub/libmonetra/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(openssl)
 
